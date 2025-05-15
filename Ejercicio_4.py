@@ -4,13 +4,13 @@ import os
 edificios = 4 # Cantidad de edificios
 dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"] # Dias de la semana
 total_por_edificio = [] # Guardado del consumo de cada edificio en la semana
-total_semana = 0 # Total de la semana
+total_semana = 0 # Total general de la semana
 
 # Bucle para cada edificio
 for edificio in range(1,edificios+1):
     os.system("cls || clear")
     total_edificio = 0
-    # Bucle por dia
+    # Bucle por dia y por turno
     for dia in dias:
         print(f"Introduzca el consumo de enegia en kilovatios del edificio {edificio} del dia {dia}")
         turno_mañana = float(input(f"Turno de la mañana: "))
@@ -18,7 +18,7 @@ for edificio in range(1,edificios+1):
         turno_nocturno = float(input(f"Turno de la noche: ")) # Pedir cada turno
         print(" ") # Dejar un espacio despues del enter
 
-        total_edificio += turno_mañana + turno_tarde + turno_nocturno # Suma de cada turno para obtener total de la semana del edificio
+        total_edificio += turno_mañana + turno_tarde + turno_nocturno # Suma de cada turno y cada dia para obtener el total de la semana del edificio
     
     total_por_edificio.append(str(total_edificio)) # Guardar el total del edificio
     total_semana += total_edificio # Total de la semana en general de cada edificio
