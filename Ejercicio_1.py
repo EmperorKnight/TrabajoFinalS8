@@ -14,7 +14,7 @@ for seccion in range(1,secciones+1):
     # Bucle para cada estudiante en la sección
     for estudiante in range(1,estudiantes_por_seccion+1):
         asistencia_estudiante = 0
-
+        
         # Bucle de asistencia por dia
         for dia in dias:
             asistencia = input(f"¿El estudiante {estudiante} asistio el {dia}? (S/N): ").strip().upper()
