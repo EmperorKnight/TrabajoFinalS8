@@ -1,4 +1,4 @@
- grupos = ['A', 'B', 'C']
+grupos = ['A', 'B', 'C']
 alumnos_por_grupo = 6
 total_dias = 5
 
